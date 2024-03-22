@@ -1,36 +1,38 @@
-#### Variables declared for VPC ####
-variable cidr_block {
-    type = string
-    default = "0.0.0.0/0"
-    description = "CIDR Block for VPC"
+# Variables for the VPC and Others
+
+variable "vpc_name_tag" {
+  type = map
 }
 
-variable instance_tenancy {
-    type = string
-    default = "default"
+variable "vpc_cidr_block" {
+  type      = string
+  default   = "XXXX"
 }
 
-variable enable_dns_support {
-    type = bool
-    default = true
+variable "vpc_instance_tenancy" {
+  type      = string
+  default   = "default"
 }
 
-variable enable_dns_hostnames {
-    type = bool
-    default = true
+variable "vpc_enable_dns_support" {
+  type      = bool
+  default   = true
 }
 
-variable vpc_tags {
-    type = map(string)
-    default = {
-      "name" = "main-vpc"
-    }
+variable "vpc_enable_dns_hostnames" {
+  type      = bool
+  default   = true
 }
+
 
 #### Variables declared for Subnet ####
 variable region {
     description = "AWS Region to be used"
     default = "us-east-1"
+}
+
+variable vpc_id {
+    description = "VPC ID"
 }
 
 variable subnet_cidr_block {
@@ -40,6 +42,12 @@ variable subnet_cidr_block {
 }
 
 variable azs {
+    type        = list(string)
+    description = "list of available availability zones"
+    default = []
+}
+
+variable availability_zone {
     type        = list(string)
     description = "list of available availability zones"
     default = []
