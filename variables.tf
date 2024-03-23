@@ -24,6 +24,10 @@ variable "vpc_enable_dns_hostnames" {
   default   = true
 }
 
+variable region {
+    description = "AWS Region to be used"
+}
+
 # Variables for Subnets
 
 variable "subnet_az" {
@@ -46,6 +50,33 @@ variable "subnet_name_tag" {
 }
 
 variable "aws_vpc_id" {
+  type      = string
+  default   = "XXXX"
+}
+
+# Variables for Internet Gateway
+
+variable "igw_name_tag" {
+  type = map
+}
+
+variable "aws_igw_id" {
+  type      = string
+  default   = "XXXX"
+}
+
+# Variables for Route Table
+
+variable "rtbl_name_tag" {
+  type = map
+}
+
+variable "subnet_id" {
+  type      = string
+  default   = "XXXX"
+}
+
+variable "rtbl_id" {
   type      = string
   default   = "XXXX"
 }
