@@ -53,3 +53,30 @@ variable "aws_vpc_id" {
   type      = string
   default   = "XXXX"
 }
+
+# Variables for Internet Gateway
+
+variable "igw_name_tag" {
+  type = map
+}
+
+variable "aws_igw_id" {
+  type      = string
+  default   = "XXXX"
+}
+
+# Variables for Route Table
+
+variable "rtbl_name_tag" {
+  type = map
+}
+
+variable "subnet_id" {
+  type      = string
+  default   = "XXXX"
+}
+
+variable "rtbl_id" {
+  type      = string
+  default   = "XXXX"
+}
