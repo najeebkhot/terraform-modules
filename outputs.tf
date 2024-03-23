@@ -13,3 +13,11 @@ output "internet_gateway_id" {
 output "rtbl_id" {
     value = aws_route_table.rtbl.id
 }
+
+output "elastic_ip_id" {
+    value = aws_eip.elastic_ip.id
+}
+
+output "endpoint_id" {
+    value = aws_vpc_endpoint.endpointS3.id
+}

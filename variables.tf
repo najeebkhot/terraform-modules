@@ -80,3 +80,52 @@ variable "rtbl_id" {
   type      = string
   default   = "XXXX"
 }
+
+# Variables for Nat Gateway
+
+variable "aws_elastic_ip_id" {
+  type      = string
+  default   = "XXXX"
+}
+
+variable "subnet_id" {
+  type      = string
+  default   = "XXXX"
+}
+
+variable "nat_gw_name_tag" {
+  type = map
+}
+
+# Variables for Elastic IP
+
+variable "elastic_ip_vpc" {
+  type      = bool
+  default   = true
+}
+
+variable "elastic_ip_domain" {
+  type      = string
+  default   = "XXXX"
+}
+
+# Variables for Endpoint
+
+variable "endpoint_service_name" {
+  type      = string
+  default   = "XXXX"
+}
+
+variable "aws_vpc_id" {
+  type      = string
+  default   = "XXXX"
+}
+
+variable "endpoint_name_tag" {
+  type = map
+}
+
+variable "vpc_endpoint_id" {
+  type      = string
+  default   = "XXXX"
+}
