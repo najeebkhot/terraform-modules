@@ -88,11 +88,6 @@ variable "aws_elastic_ip_id" {
   default   = "XXXX"
 }
 
-variable "subnet_id" {
-  type      = string
-  default   = "XXXX"
-}
-
 variable "nat_gw_name_tag" {
   type = map
 }
@@ -112,11 +107,6 @@ variable "elastic_ip_domain" {
 # Variables for Endpoint
 
 variable "endpoint_service_name" {
-  type      = string
-  default   = "XXXX"
-}
-
-variable "aws_vpc_id" {
   type      = string
   default   = "XXXX"
 }
