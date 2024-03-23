@@ -24,6 +24,10 @@ variable "vpc_enable_dns_hostnames" {
   default   = true
 }
 
+variable region {
+    description = "AWS Region to be used"
+}
+
 # Variables for Subnets
 
 variable "subnet_az" {
