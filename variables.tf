@@ -2,6 +2,7 @@
 
 variable "vpc_name_tag" {
   type = map
+  nullable = true
 }
 
 variable "vpc_cidr_block" {
@@ -47,6 +48,7 @@ variable "subnet_cidr_block" {
 
 variable "subnet_name_tag" {
   type = map
+  nullable = true
 }
 
 variable "aws_vpc_id" {
@@ -69,6 +71,7 @@ variable "aws_igw_id" {
 
 variable "rtbl_name_tag" {
   type = map
+  nullable = true
 }
 
 variable "subnet_id" {
@@ -90,6 +93,7 @@ variable "aws_elastic_ip_id" {
 
 variable "nat_gw_name_tag" {
   type = map
+  nullable = true
 }
 
 # Variables for Elastic IP
@@ -113,6 +117,7 @@ variable "endpoint_service_name" {
 
 variable "endpoint_name_tag" {
   type = map
+  nullable = true
 }
 
 variable "vpc_endpoint_id" {
